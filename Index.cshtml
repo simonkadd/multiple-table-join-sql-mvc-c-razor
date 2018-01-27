@@ -1,0 +1,50 @@
+﻿@model IEnumerable<OnboardingjQuery.Models.ProductSoldJoin>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ProductSoldJoin</h2>
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PSJsalesID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSJproductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSJcustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSJstoreName)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PSJsalesID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PSJproductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PSJcustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PSJstoreName)
+            </td>
+            
+        </tr>
+    }
+
+</table>
